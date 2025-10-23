@@ -1,27 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap');
 
+/* ============================
+LOGO E HEADER
+============================ */
 .logo-container {
     display: flex;
     align-items: center;
-    justify-content:center;
-    gap: 1rem; /* espaço entre a logo e o título */
+    justify-content: center;
+    gap: 1rem;
     color: #ff0000;
-    
 }
+
 .logo-container-child {
     display: flex;
     align-items: left;
-    justify-content:left;
-    gap: 1rem; /* espaço entre a logo e o título */
+    justify-content: left;
+    gap: 1rem;
     color: #ff0000;
-    
 }
 
 .logo {
-    width: 60px; /* tamanho da logo */
+    width: 60px;
     height: 60px;
     object-fit: contain;
 }
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -29,69 +32,14 @@ body {
     background-attachment: fixed;
     color: #f2f2f2;
 }
+
 header {
     text-align: center;
-    padding: 2rem;
     border-bottom: 2px solid #00cf0e;
-    height: 5px; /* Ajuste conforme quiser */
-    padding: 20px 0; /* Reduz o espaçamento interno */
+    padding: 20px 0;
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-}
-/* Dropdown */
-.dropdown {
-  position: fixed;
-  display: inline-block;
-  margin-left: 20px; /* distância do logo */
-  top: 10px;
-  left: 10px;
-  z-index: 1000;
-  margin-top: 20px;
-}
-
-.dropbtn {
-   background-color: transparent;
-  color: #ff0000; /* vermelho */
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-  padding: 8px 12px;
-  font-weight: bold;
-}
-
-.dropbtn:hover {
-  background-color: #ff0000;
-  color: #111;
-}
-
-.dropdown-content {
-    display: none;
-  position: absolute;
-  background-color:#272727 ; /* escuro minimalista */
-  min-width: 140px;
-  box-shadow: 5px 8px 16px rgba(0,0,0,0.3);
-  border-radius: 18px;
-  overflow: hidden;
-  margin-top: 5px;
-  
-}
-
-.dropdown-content a {
-  color: #ff0000;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  transition: all 0.2s ease;
-}
-
-.dropdown-content a:hover {
-  background-color: #4b1919;
-  
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
+    justify-content: center;
+    align-items: center;
 }
 
 header h1 {
@@ -106,13 +54,68 @@ header p {
     color: #ccc;
 }
 
-.bandas {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
+/* ============================
+DROPDOWN MENU
+============================ */
+.dropdown {
+    position: fixed;
+    display: inline-block;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
 }
 
+.dropbtn {
+    background-color: transparent;
+    color: #ff0000;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 8px 12px;
+    font-weight: bold;
+}
+
+.dropbtn:hover {
+    background-color: #ff0000;
+    color: #111;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #272727;
+    min-width: 140px;
+    box-shadow: 5px 8px 16px rgba(0,0,0,0.3);
+    border-radius: 18px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.dropdown-content a {
+    color: #ff0000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #4b1919;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ============================
+GRID DE BANDAS (HOME)
+============================ */
+.bandas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas no desktop */
+    gap: 20px;
+    padding: 20px;
+}
 
 .banda {
     background-color: #1a1a1a;
@@ -164,6 +167,9 @@ header p {
     background: #cc0000;
 }
 
+/* ============================
+FOOTER
+============================ */
 footer {
     text-align: center;
     padding: 1rem;
@@ -173,23 +179,24 @@ footer {
     color: #aaa;
 }
 
-.band_image{
-    padding-left: 2;
+/* ============================
+PÁGINA DA BANDA
+============================ */
+.band_image {
     width: 50%;
     height: 250px;
     object-fit: contain;
-    
 }
+
 .band-container {
     display: flex;
     gap: 20px;
     padding: 20px;
-    flex-wrap: wrap; /* Mantém responsivo em telas menores */
+    flex-wrap: wrap; /* mantém responsivo */
 }
 
-/* Coluna esquerda */
 .band-info {
-    flex: 2; /* ocupa mais espaço */
+    flex: 2;
     min-width: 300px;
 }
 
@@ -199,14 +206,14 @@ footer {
     margin-top: 10px;
 }
 
-/* Coluna direita */
 .band-player {
-    flex: 1; /* ocupa menos espaço */
+    flex: 1;
     min-width: 300px;
 }
+
 .social-link {
-    font-size: 2rem;           /* tamanho do ícone */
-    color: #ff0000;            /* vermelho YouTube */
+    font-size: 2rem;
+    color: #ff0000;
     text-decoration: none;
     margin-left: 10px;
     transition: transform 0.2s, color 0.2s;
@@ -223,12 +230,13 @@ footer {
     color: #e0e0e0;
     margin-bottom: 10px;
 }
+
 .biography {
-    max-width: 50%;                  /* largura máxima, metade da página */
-    color: #e0e0e0;                  /* texto claro */
-    background-color: #1f1f1f;       /* fundo levemente mais escuro */
+    max-width: 50%;
+    color: #e0e0e0;
+    background-color: #1f1f1f;
     padding: 25px 30px;
-    border-left: 4px solid #ff4c4c;  /* destaque lateral em vermelho */
+    border-left: 4px solid #ff4c4c;
     border-radius: 6px;
     font-family: 'Georgia', 'Times New Roman', serif;
     line-height: 1.8;
@@ -236,11 +244,11 @@ footer {
 }
 
 .biography h2 {
-    color: #ff4c4c;                  /* título em destaque */
+    color: #ff4c4c;
     font-size: 1.4rem;
     margin-top: 15px;
     margin-bottom: 10px;
-    font-family: 'Bebas Neue', sans-serif; /* se quiser um visual mais “rock” */
+    font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 1px;
 }
 
@@ -251,16 +259,49 @@ footer {
     text-align: left;
 }
 
-/* Responsivo para telas menores */
-@media (max-width: 800px) {
-    .biography {
-        max-width: 100%;
-        padding: 20px;
+/* ============================
+RESPONSIVO
+============================ */
+@media (max-width: 1024px) {
+    .bandas {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas médias */
     }
 }
-.bandas {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Máximo de 4 colunas iguais */
-  gap: 20px; /* Espaço entre os itens */
-  padding: 20px;
+
+@media (max-width: 768px) {
+    /* Home */
+    .bandas {
+        grid-template-columns: 1fr; /* 1 coluna em celular */
+    }
+
+    /* Página da banda */
+    .band-container {
+        flex-direction: column; /* empilha verticalmente */
+        align-items: center;
+    }
+
+    .band-info, .band-player {
+        min-width: 90%;
+        text-align: center;
+    }
+
+    .band-info img {
+        margin: 0 auto 20px auto;
+    }
+
+    .biography {
+        border-left: none;
+        border-top: 4px solid #ff4c4c;
+        padding: 20px;
+    }
+
+    .band-player iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    .social-link {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
 }
