@@ -276,7 +276,7 @@ RESPONSIVO
 
     /* Página da banda */
     .band-container {
-        flex-direction: column; /* empilha verticalmente */
+        flex-direction: column-reverse; /* inverte a ordem dos blocos */
         align-items: center;
     }
 
@@ -293,15 +293,38 @@ RESPONSIVO
         border-left: none;
         border-top: 4px solid #ff4c4c;
         padding: 20px;
+        text-align: center; /* Centraliza o texto */
+        margin: 0 auto; /* Centraliza o container horizontalmente */
+        width: 90%; /* Faz ele ocupar menos largura */
+        max-width: 600px; /* Limita o tamanho pra melhor leitura */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza conteúdo interno */
+        justify-content: center;
+    }
+
+    .band-player {
+        margin-bottom: 0; /* remove espaço abaixo do player */
+        padding-bottom: 0;
     }
 
     .band-player iframe {
         width: 100%;
         height: 300px;
+        margin: 0; /* zera margens */
+        padding: 0;
+        display: block;
+    }
+
+    .sugestion {
+        margin-top: -5px; /* puxa o texto para cima */
+        padding-top: 0;
+        transform: translateY(-15px); /* força ele colar */
     }
 
     .social-link {
-        margin-left: 5px;
-        margin-right: 5px;
+        font-size: 2rem;
+        margin-left: 8px;
+        margin-right: 8px;
     }
 }
